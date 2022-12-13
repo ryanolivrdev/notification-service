@@ -1,0 +1,10 @@
+#!/bin/bash
+
+POSTRES_CONTAINER_NAME=postgres-notification-service
+POSTGRES_PASSWORD=admin
+POSTGRES_PORT=5432
+
+DOCKER_NET_NAME=postgres-notification-service-bridge
+DOCKER_SUBNET=172.21.0.0/16
+DOCKER_IP_RANGE=172.21.0.0/16
+DOCKER_GATEWAY=172.21.0.254

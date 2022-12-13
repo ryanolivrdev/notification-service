@@ -1,0 +1,22 @@
+volumes:
+  data:
+
+
+services:
+  postgres:
+    container_name: postgres-notification-service
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=notification_service
+    ports:
+      - 5432:5432
+    networks:
+      - default
+    volumes:
+      - data:/var/lib/postgresql
+
+networks:
+  default:
+    name: "notification-service-net"
