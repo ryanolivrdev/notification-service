@@ -11,7 +11,7 @@ interface SendNotificationResponse {
   notification: Notification;
 }
 
-export class sendNotification {
+export class SendNotification {
   async execute(
     request: SendNotificationRequest,
   ): Promise<SendNotificationResponse> {
