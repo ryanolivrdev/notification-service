@@ -26,7 +26,7 @@ export class NotificationsController {
     });
   }
 
-  @Get('cout/from/:recipientId')
+  @Get('count/from/:recipientId')
   async countFromRecipiente(@Param('recipientId') recipientId: string) {
     const { count } = await this.countRecipientNotifications.execute({
       recipientId,
