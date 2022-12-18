@@ -35,7 +35,12 @@ export class NotificationsController {
     });
   }
 
-  async unread() {}
+  @Patch(':id/unread')
+  async unread(@Param('id') id: string) {
+    await this.unreadNotification.execute({
+      notificationId: id,
+    });
+  }
 
   @Post()
   async create(@Body() body: CreateNotificationBody) {
